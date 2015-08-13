@@ -27,7 +27,7 @@ static NSString *appName;
 -(NSString *)documentDirectoryLogFileLocation{
     
     NSArray *documentDirectoryFolderLocation = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
-    return [[documentDirectoryFolderLocation objectAtIndex:0]stringByAppendingString:@"packedful.log"];
+    return [[documentDirectoryFolderLocation objectAtIndex:0]stringByAppendingString:[NSString stringWithFormat:@"%@.log",appName]];
 }
 
 -(void)logFor:(NSString *)text{
